@@ -18,7 +18,7 @@
     {{ toCLP(scope.row.price) }}
       </template>
     </el-table-column>
-    <el-table-column prop="origin" label="Falabella" />
+    <el-table-column prop="origin" label="Origen" />
     <el-table-column prop="key" label="Código" />
     <el-table-column prop="src" label="Link">
     <template #default="scope">
