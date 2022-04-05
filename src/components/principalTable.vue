@@ -44,7 +44,7 @@ components: {Timer},
 data () {
   return {
     products: [],
-    api_url: "/api/products",
+    api_url: "http://api-monoi.herokuapp.com/products",
     page: 1,
     pageSize: 15,
     loading: true
