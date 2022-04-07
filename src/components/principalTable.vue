@@ -13,7 +13,7 @@
         </template>
     </el-table-column>
     <el-table-column prop="name" label="Nombre"/>
-    <el-table-column prop="price" label="Precio" align="center">
+    <el-table-column prop="price" label="Precio" align="center" sortable>
     <template #default="scope">
     {{ toCLP(scope.row.price) }}
       </template>
