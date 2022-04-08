@@ -8,12 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vueuse/head": "^0.7.5",
     "@element-plus/icons-vue": "^1.1.4",
+    "@vueuse/head": "^0.7.5",
+    "axios": "^0.26.1",
     "element-plus": "^2.1.8",
     "pinia": "^2.0.13",
     "vite-ssr": "^0.15.0",
     "vue": "3",
+    "vue-axios": "^3.4.1",
     "vue-router": "4"
   },
   "devDependencies": {
