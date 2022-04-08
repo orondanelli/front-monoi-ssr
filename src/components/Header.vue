@@ -14,7 +14,7 @@ export default {
             lastUpdated: "",
             textTimeAgo: "",
             loading: true,
-            api_url: "http://api-monoi.herokuapp.com/products/lastUpdate",
+            api_url: "https://api-monoi.herokuapp.com/products/lastUpdate",
         }
     },
     created() {
