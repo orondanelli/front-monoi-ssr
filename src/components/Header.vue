@@ -1,7 +1,8 @@
 <template>
     <div class="header">
         <span class="center-text">Monoi barato </span>
-        <span class="updated-text">(Actualizado {{ textTimeAgo }})</span>
+                <span class="updated-text">(Actualizado {{ textTimeAgo }})</span>
+
     </div>
 </template>
 
@@ -21,8 +22,9 @@ export default {
         axios
             .get(this.api_url)
             .then(response => { 
-                this.lastUpdated = response.data[0].collected_dt
-                this.textTimeAgo = response.data[0].time_ago
+                this.lastUpdated = response.data[0].collected_dt;
+                this.textTimeAgo = response.data[0].time_ago;
+                this.loading = false;
                 })
     },
     computed:{

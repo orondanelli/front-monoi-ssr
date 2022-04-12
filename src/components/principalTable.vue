@@ -13,9 +13,15 @@
         </template>
     </el-table-column>
     <el-table-column prop="name" label="Nombre"/>
-    <el-table-column prop="price" label="Precio" align="center" sortable>
+    <el-table-column prop="actual_price" label="Precio" align="center" sortable>
     <template #default="scope">
-    {{ toCLP(scope.row.price) }}
+    {{ toCLP(scope.row.actual_price) }}
+     <el-tag
+          :type="scope.row.var < '0' ? 'success' : 'danger'"
+          disable-transitions
+          
+          >{{ scope.row.var }}%</el-tag
+        >
       </template>
     </el-table-column>
     <el-table-column prop="origin" label="Origen" />
@@ -46,14 +52,14 @@ data () {
     products: [],
     api_url: "https://api-monoi.herokuapp.com/products",
     page: 1,
-    pageSize: 15,
+    pageSize: 20,
     loading: true
   }
 },
 computed: {
   pagedData () {
     return this.products.slice(this.pageSize * this.page - this.pageSize, this.pageSize * this.page)
-  }
+  },
 },
 async created() {
     const response = await fetch(this.api_url);
@@ -69,7 +75,6 @@ async created() {
     },
     setPage(val){
       this.page = val
-      console.log(val)
     }
 }
 }
